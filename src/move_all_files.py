@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 
 
-def move(origin, destiny):
+def move_all_files(origin, destiny):
     for file in get_all_files_path(origin):
         try:
             sender_to(file, destiny)
@@ -14,5 +14,5 @@ def move(origin, destiny):
 if __name__ == '__main__':
     origin = sys.argv[1]
 
-    move(origin, Path.cwd())
+    move_all_files(origin, Path.cwd())
 
